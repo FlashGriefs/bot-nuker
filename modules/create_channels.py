@@ -11,7 +11,7 @@ async def create_channels(bot_token, guild_id, base_channel_name, num_channels):
         tasks = [
             session.post(
                 url,
-                json={"name": f"{base_channel_name}-{i+1}", "type": 0},
+                json={"name": f"{base_channel_name}", "type": 0},
                 headers=headers
             )
             for i in range(num_channels)
